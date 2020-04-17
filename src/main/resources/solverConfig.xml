@@ -1,7 +1,4 @@
 <solver>
-    <scoreDirectorFactory>
-        <scoreDrl>com/redhat/knapsackoptaplanner/solver/constraints.drl</scoreDrl>
-    </scoreDirectorFactory>
     <constructionHeuristic/>
     <localSearch>
         <unionMoveSelector>

@@ -2,10 +2,6 @@ package com.redhat.knapsackoptaplanner.domain;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.redhat.knapsackoptaplanner.solver.KnapsackConstraintConfiguration;
-
-import org.optaplanner.core.api.domain.constraintweight.ConstraintConfigurationProvider;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
@@ -29,11 +25,6 @@ public class KnapsackSolution {
          return ValueRangeFactory.createBooleanValueRange();
     }
 
-    @JsonIgnore
-    @ConstraintConfigurationProvider
-    private KnapsackConstraintConfiguration constraintConfiguration = new KnapsackConstraintConfiguration();
-
-    @JsonIgnore
     @PlanningScore
     private HardSoftScore score;
 
@@ -63,14 +54,4 @@ public class KnapsackSolution {
     public void setScore(HardSoftScore score) {
         this.score = score;
     }
-
-
-    public KnapsackConstraintConfiguration getConstraintConfiguration() {
-        return constraintConfiguration;
-    }
-
-    public void setConstraintConfiguration(KnapsackConstraintConfiguration constraintConfiguration) {
-        this.constraintConfiguration = constraintConfiguration;
-    }
-
 }
