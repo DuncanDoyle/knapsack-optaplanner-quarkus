@@ -34,6 +34,7 @@ You can now start the application with the command: `java -jar target/knapsack-o
 One of the advanced features of Quarkus is that it allows you, in combination with [GraalVM](https://www.graalvm.org/) and SubstrateVM, to compile the application into native executable. This, among other things, reduces the application's size, reduces its memory footprint and greatly improves the startup time.
 
 To compile our OptaPlanner Quarkus application, you can run the following command: `mvn clean package -Pnative`
+
 Note that native compilation can take a couple of minutes.
 
 You can now start the application with the command: `./target/knapsack-optaplanner-quarkus-1.0.0-SNAPSHOT-runner`
